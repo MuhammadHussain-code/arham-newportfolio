@@ -1,26 +1,190 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #14171c;
+  --surface: #1a1d23;
+  --card: #20242b;
+  --card-hover: #262b33;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --foreground: #f4f5f7;
+  --muted: #b8bcc4;
+  --subtle: #7a7f88;
+  --accent: #68e0cf;
+  --accent-deep: #1f7a70;
+  --accent-ink: #0d3a35;
+  --glow: rgba(104, 224, 207, 0.22);
+
+  --font-sans: var(--font-poppins), system-ui, sans-serif;
+  --font-display: var(--font-syne), var(--font-poppins), system-ui, sans-serif;
+  --font-script: var(--font-dafoe), cursive;
+
+  --text-display: clamp(3rem, 1.4rem + 7.5vw, 8.5rem);
+  --text-h2: clamp(2rem, 1.3rem + 3vw, 4rem);
+  --text-h3: clamp(1.25rem, 1.05rem + 0.9vw, 1.75rem);
+  --text-lead: clamp(1.05rem, 0.95rem + 0.4vw, 1.25rem);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --nav-height: 5rem;
+  --section-space: clamp(5rem, 4rem + 6vw, 10rem);
+  --gutter: clamp(1.25rem, 0.6rem + 3vw, 4rem);
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-card: var(--card);
+  --color-card-hover: var(--card-hover);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+  --color-accent: var(--accent);
+  --color-accent-deep: var(--accent-deep);
+  --color-accent-ink: var(--accent-ink);
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+  --font-script: var(--font-script);
+  --ease-out: var(--ease-out);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+html.has-cursor,
+html.has-cursor a,
+html.has-cursor button {
+  cursor: none;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.7;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@utility container-x {
+  width: 100%;
+  max-width: 88rem;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+@utility section-space {
+  padding-block: var(--section-space);
+}
+
+@utility font-display {
+  font-family: var(--font-display);
+}
+
+@utility font-script {
+  font-family: var(--font-script);
+}
+
+@utility text-display {
+  font-size: var(--text-display);
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+}
+
+@utility text-h2 {
+  font-size: var(--text-h2);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+}
+
+@utility text-h3 {
+  font-size: var(--text-h3);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+@utility text-lead {
+  font-size: var(--text-lead);
+  line-height: 1.7;
+}
+
+@utility grid-bg {
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+@utility glass {
+  background: rgba(26, 29, 35, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.hero-glow {
+  background:
+    radial-gradient(60% 60% at 50% 50%, var(--glow), transparent 70%);
+}
+
+.caret::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 0.9em;
+  margin-left: 0.15em;
+  vertical-align: -0.1em;
+  background: var(--accent);
+  animation: caret-blink 1s steps(2) infinite;
+}
+
+@keyframes caret-blink {
+  50% {
+    opacity: 0;
+  }
 }
