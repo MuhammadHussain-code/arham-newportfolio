@@ -1,14 +1,17 @@
-import { SectionHeading } from "@/components/ui/SectionHeading";
+import { projects } from "@/data/projects";
+import { Department } from "@/components/ui/Department";
 import { ProjectsGrid } from "@/components/sections/ProjectsGrid";
 
 export function Projects() {
   return (
-    <section id="projects" className="section-space" aria-labelledby="projects-title">
-      <div className="container-x">
-        <SectionHeading id="projects-title" script="Latest works" title="Projects" description="Web and mobile products shipped for clients and startups, from first commit to store release." />
-        <div className="mt-10">
-          <ProjectsGrid />
-        </div>
+    <section id="projects" className="gutter-x dept-space pt-0" aria-labelledby="projects-title">
+      <Department
+        id="projects-title"
+        title="Projects"
+        aside={<p className="label tabular text-ink-mute">{projects.length} shipped</p>}
+      />
+      <div className="mt-8 lg:mt-10">
+        <ProjectsGrid />
       </div>
     </section>
   );

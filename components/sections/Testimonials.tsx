@@ -1,40 +1,50 @@
 import Image from "next/image";
 import { clients, testimonials } from "@/data/testimonials";
-import { SectionHeading } from "@/components/ui/SectionHeading";
-import { TestimonialCarousel } from "@/components/ui/TestimonialCarousel";
-import { Reveal } from "@/components/motion/Reveal";
+import { Department } from "@/components/ui/Department";
+import { PageTurn } from "@/components/motion/PageTurn";
 
 export function Testimonials() {
   return (
-    <section id="reviews" className="section-space bg-surface/60 border-y border-border overflow-hidden" aria-labelledby="reviews-title">
-      <div className="container-x">
-        <SectionHeading id="reviews-title" script="What customers say" title="Reviews" />
-        <Reveal className="mt-12">
-          <TestimonialCarousel items={testimonials} />
-        </Reveal>
+    <section id="reviews" className="gutter-x dept-space pt-0" aria-labelledby="reviews-title">
+      <Department id="reviews-title" title="Reviews" />
 
-        <Reveal className="mt-20">
-          <p className="font-script text-accent text-2xl leading-none" aria-hidden="true">
-            My partners
-          </p>
-          <h3 className="mt-2 font-display text-h3 font-bold">Clients</h3>
-          <ul className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5" role="list">
-            {clients.map((client) => (
-              <li key={client.name}>
-                <a
-                  href={client.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex h-24 items-center justify-center rounded-xl border border-border bg-card px-6 grayscale opacity-70 transition-[opacity,filter,border-color] duration-300 hover:grayscale-0 hover:opacity-100 hover:border-accent/40"
-                  aria-label={client.name}
-                >
-                  <Image src={client.logo} alt={client.name} width={client.width} height={client.height} className="max-h-12 w-auto max-w-full object-contain" />
-                </a>
-              </li>
-            ))}
-          </ul>
-        </Reveal>
-      </div>
+      <ul className="mt-8 grid md:grid-cols-2 md:gap-x-12 lg:mt-10" role="list">
+        {testimonials.map((item, index) => (
+          <PageTurn key={item.name} as="li" className="border-t border-hair py-6 md:py-7" delay={0.04 * index}>
+            <figure>
+              <blockquote>
+                <p className={index < 2 ? "dropcap text-ink" : "text-ink"}>{item.quote}</p>
+              </blockquote>
+              <figcaption className="mt-4">
+                <p className="font-label text-[0.875rem] font-medium">{item.name}</p>
+                <p className="label-sm mt-0.5 text-ink-mute">{item.title}</p>
+              </figcaption>
+            </figure>
+          </PageTurn>
+        ))}
+      </ul>
+
+      <PageTurn className="mt-12 lg:mt-16">
+        <div className="flex items-baseline justify-between border-t border-ink pt-5">
+          <h3 className="text-h3">Clients</h3>
+          <p className="label-sm tabular text-ink-mute">{clients.length} shown</p>
+        </div>
+        <ul className="mt-6 grid grid-cols-2 border-t border-hair sm:grid-cols-3 lg:grid-cols-5" role="list">
+          {clients.map((client) => (
+            <li key={client.name} className="border-b border-hair">
+              <a
+                href={client.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-24 items-center justify-center px-5 grayscale transition-[filter] duration-300 hover:grayscale-0 focus-visible:grayscale-0"
+                aria-label={client.name}
+              >
+                <Image src={client.logo} alt={client.name} width={client.width} height={client.height} className="max-h-11 w-auto max-w-[9rem] object-contain" />
+              </a>
+            </li>
+          ))}
+        </ul>
+      </PageTurn>
     </section>
   );
 }

@@ -1,87 +1,103 @@
 "use client";
 
-import Image from "next/image";
-import { motion } from "motion/react";
-import { ArrowUpRight, Check } from "lucide-react";
 import type { Project } from "@/data/projects";
-import { Chip } from "@/components/ui/Chip";
-import { TiltCard } from "@/components/ui/TiltCard";
-import { Button } from "@/components/ui/Button";
+import { Plate } from "@/components/ui/Plate";
+import { Mark } from "@/components/ui/Mark";
+import { TextLink } from "@/components/ui/TextLink";
+import { PageTurn } from "@/components/motion/PageTurn";
 import { cn } from "@/lib/utils";
 
-export function ProjectCard({ project, index }: { project: Project; index: number }) {
-  const reversed = index % 2 === 1;
-  const href = project.link?.href;
+const shapes = ["disc", "slab", "quadrant", "wave"] as const;
 
-  const media = (
-    <TiltCard maxTilt={4} className="group/media relative">
-      <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-[0_30px_60px_-30px_rgba(0,0,0,0.6)]">
-        <Image
-          src={project.image.src}
-          alt={project.image.alt}
-          width={project.image.width}
-          height={project.image.height}
-          sizes="(min-width: 1024px) 56vw, 100vw"
-          className="aspect-[16/9] w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/media:scale-[1.04]"
-          loading={index < 2 ? "eager" : "lazy"}
-        />
-        <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/5 transition-[box-shadow] duration-500 group-hover/media:shadow-[inset_0_0_0_1px_rgba(104,224,207,0.4)]" aria-hidden="true" />
+function Copy({ project, feature }: { project: Project; feature: boolean }) {
+  return (
+    <>
+      <h3 id={`project-${project.slug}`} className={cn(feature ? "text-dept" : "text-h3")}>
+        {project.name}
+      </h3>
+      <p className="label mt-2 text-ink-mute">
+        {project.category}
+        {project.client ? ` · for ${project.client}` : ""}
+      </p>
+      <p className="label mt-1 text-spot">{project.role}</p>
+    </>
+  );
+}
+
+function Detail({ project }: { project: Project }) {
+  return (
+    <>
+      <p className="text-ink-soft">{project.description}</p>
+      <ul className="mt-4 border-t border-ink" aria-label="Contributions">
+        {project.contributions.map((item) => (
+          <li key={item} className="border-b border-hair py-2 text-[0.9375rem] text-ink-soft">
+            {item}
+          </li>
+        ))}
+      </ul>
+      <p className="label-sm mt-4 text-ink-mute">{project.stack.join(" · ")}</p>
+      <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2">
+        {project.link ? <TextLink href={project.link.href}>{project.link.label}</TextLink> : null}
+        {project.note ? <p className="text-sm italic text-ink-mute">{project.note}</p> : null}
       </div>
-    </TiltCard>
+    </>
+  );
+}
+
+export function ProjectCard({ project, index }: { project: Project; index: number }) {
+  const feature = index === 0;
+  const reversed = index % 2 === 0;
+  const shape = shapes[index % shapes.length];
+
+  const plate = (
+    <Plate
+      src={project.image.src}
+      alt={project.image.alt}
+      width={project.image.width}
+      height={project.image.height}
+      shape={shape}
+      aspect={feature ? "2 / 1" : "16 / 10"}
+      sizes={feature ? "(min-width: 1024px) 79vw, 100vw" : "(min-width: 1024px) 46vw, 100vw"}
+      priority={feature}
+    >
+      {feature ? <Mark size={22} className="absolute bottom-4 right-4 z-10" /> : null}
+    </Plate>
   );
 
-  return (
-    <motion.article
-      layout
-      initial={{ opacity: 0, y: 32 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 16, transition: { duration: 0.25 } }}
-      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-      className="grid items-center gap-8 lg:grid-cols-12 lg:gap-12"
-    >
-      <div className={cn("lg:col-span-7", reversed && "lg:order-2")}>
-        {href ? (
-          <a href={href} target="_blank" rel="noopener noreferrer" data-cursor="view" className="block rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent" aria-label={`${project.name} — ${project.link?.label}`}>
-            {media}
-          </a>
-        ) : (
-          media
-        )}
-      </div>
+  const linked = project.link ? (
+    <a href={project.link.href} target="_blank" rel="noopener noreferrer" className="block focus-visible:outline-2 focus-visible:outline-spot focus-visible:outline-offset-4" aria-label={`${project.name}: ${project.link.label}`}>
+      {plate}
+    </a>
+  ) : (
+    plate
+  );
 
-      <div className={cn("lg:col-span-5", reversed && "lg:order-1")}>
-        <div className="flex flex-wrap items-center gap-2">
-          <Chip accent>{project.category}</Chip>
-          {project.client ? <span className="text-sm text-subtle">for {project.client}</span> : null}
+  if (feature) {
+    // The lead feature runs at full width: plate across the column, copy in two columns beneath.
+    return (
+      <PageTurn as="article" className="border-b border-hair py-10 lg:py-14" aria-labelledby={`project-${project.slug}`}>
+        {linked}
+        <div className="mt-8 grid gap-6 lg:grid-cols-12 lg:gap-12">
+          <div className="lg:col-span-5">
+            <Copy project={project} feature />
+          </div>
+          <div className="lg:col-span-7">
+            <Detail project={project} />
+          </div>
         </div>
-        <h3 className="mt-4 font-display text-[clamp(1.75rem,1.3rem+1.6vw,2.75rem)] font-bold leading-[1.05] tracking-tight">{project.name}</h3>
-        <p className="mt-2 text-sm text-accent">{project.role}</p>
-        <p className="mt-4 text-muted">{project.description}</p>
-        <ul className="mt-5 space-y-2 text-sm text-muted" aria-label="Contributions">
-          {project.contributions.map((item) => (
-            <li key={item} className="flex gap-2.5">
-              <Check className="mt-1 size-3.5 shrink-0 text-accent" aria-hidden="true" />
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
-        <ul className="mt-6 flex flex-wrap gap-2" aria-label="Technologies">
-          {project.stack.map((tech) => (
-            <li key={tech}>
-              <Chip>{tech}</Chip>
-            </li>
-          ))}
-        </ul>
-        <div className="mt-7 flex flex-wrap items-center gap-4">
-          {project.link ? (
-            <Button href={project.link.href} variant="secondary">
-              {project.link.label}
-              <ArrowUpRight className="size-4" aria-hidden="true" />
-            </Button>
-          ) : null}
-          {project.note ? <p className="text-xs text-subtle">{project.note}</p> : null}
+      </PageTurn>
+    );
+  }
+
+  return (
+    <PageTurn as="article" className="grid gap-6 border-b border-hair py-10 lg:grid-cols-12 lg:gap-12 lg:py-14" aria-labelledby={`project-${project.slug}`}>
+      <div className={cn("lg:col-span-7", reversed && "lg:order-2")}>{linked}</div>
+      <div className={cn("lg:col-span-5", reversed && "lg:order-1")}>
+        <Copy project={project} feature={false} />
+        <div className="mt-4">
+          <Detail project={project} />
         </div>
       </div>
-    </motion.article>
+    </PageTurn>
   );
 }

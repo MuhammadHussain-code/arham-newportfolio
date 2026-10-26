@@ -1,29 +1,34 @@
 import type { Metadata, Viewport } from "next";
-import { Poppins, Syne, Mr_Dafoe } from "next/font/google";
+import { Archivo, Bodoni_Moda, Source_Serif_4 } from "next/font/google";
 import { site } from "@/lib/site";
 import { profile } from "@/data/profile";
 import { socialLinks } from "@/data/socialLinks";
 import { Providers } from "@/components/layout/Providers";
 import "./globals.css";
 
-const poppins = Poppins({
+const bodoni = Bodoni_Moda({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-poppins",
+  weight: "variable",
+  style: ["normal", "italic"],
+  axes: ["opsz"],
+  variable: "--font-bodoni",
   display: "swap",
 });
 
-const syne = Syne({
+const serif = Source_Serif_4({
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
-  variable: "--font-syne",
+  weight: "variable",
+  style: ["normal", "italic"],
+  axes: ["opsz"],
+  variable: "--font-serif",
   display: "swap",
 });
 
-const dafoe = Mr_Dafoe({
+const archivo = Archivo({
   subsets: ["latin"],
-  weight: "400",
-  variable: "--font-dafoe",
+  weight: "variable",
+  axes: ["wdth"],
+  variable: "--font-archivo",
   display: "swap",
 });
 
@@ -67,8 +72,8 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#14171c",
-  colorScheme: "dark",
+  themeColor: "#fbfaf6",
+  colorScheme: "light",
 };
 
 const jsonLd = {
@@ -109,7 +114,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${poppins.variable} ${syne.variable} ${dafoe.variable} h-full`}>
+    <html lang="en" className={`${bodoni.variable} ${serif.variable} ${archivo.variable} h-full`}>
       <body className="min-h-full flex flex-col">
         <script
           type="application/ld+json"

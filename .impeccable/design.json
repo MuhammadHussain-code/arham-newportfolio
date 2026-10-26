@@ -1,0 +1,236 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-23T00:00:00Z",
+  "title": "Design System: Arham Awan Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "spot": {
+        "role": "primary",
+        "displayName": "Issue Teal",
+        "canonical": "#0a7466",
+        "tonalRamp": ["oklch(20% 0.05 180)", "oklch(30% 0.07 180)", "oklch(40% 0.08 180)", "oklch(48% 0.09 180)", "oklch(60% 0.09 180)", "oklch(72% 0.08 180)", "oklch(85% 0.05 180)", "oklch(95% 0.02 180)"]
+      },
+      "spot-deep": {
+        "role": "primary",
+        "displayName": "Pressed Teal",
+        "canonical": "#06564c",
+        "tonalRamp": ["oklch(18% 0.05 180)", "oklch(28% 0.07 180)", "oklch(38% 0.08 180)", "oklch(48% 0.09 180)", "oklch(60% 0.09 180)", "oklch(72% 0.08 180)", "oklch(85% 0.05 180)", "oklch(95% 0.02 180)"]
+      },
+      "spot-tint": {
+        "role": "primary",
+        "displayName": "Teal Wash",
+        "canonical": "#e2f0ec",
+        "tonalRamp": ["oklch(20% 0.05 180)", "oklch(30% 0.07 180)", "oklch(40% 0.08 180)", "oklch(48% 0.09 180)", "oklch(60% 0.09 180)", "oklch(72% 0.08 180)", "oklch(85% 0.05 180)", "oklch(94% 0.02 180)"]
+      },
+      "on-spot": {
+        "role": "primary",
+        "displayName": "Spot White",
+        "canonical": "#ffffff",
+        "tonalRamp": ["oklch(15% 0 0)", "oklch(30% 0 0)", "oklch(45% 0 0)", "oklch(60% 0 0)", "oklch(75% 0 0)", "oklch(85% 0 0)", "oklch(95% 0 0)", "oklch(100% 0 0)"]
+      },
+      "on-spot-soft": {
+        "role": "primary",
+        "displayName": "Spot White Soft",
+        "canonical": "#e6f3ef",
+        "tonalRamp": ["oklch(18% 0.03 170)", "oklch(30% 0.04 170)", "oklch(42% 0.04 170)", "oklch(55% 0.04 170)", "oklch(68% 0.04 170)", "oklch(80% 0.03 170)", "oklch(90% 0.02 170)", "oklch(95% 0.015 170)"]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Coated Paper",
+        "canonical": "#fbfaf6",
+        "tonalRamp": ["oklch(15% 0.004 90)", "oklch(28% 0.004 90)", "oklch(42% 0.004 90)", "oklch(55% 0.004 90)", "oklch(68% 0.004 90)", "oklch(80% 0.004 90)", "oklch(92% 0.004 90)", "oklch(98.5% 0.004 90)"]
+      },
+      "paper-deep": {
+        "role": "neutral",
+        "displayName": "Deep Paper",
+        "canonical": "#f2efe8",
+        "tonalRamp": ["oklch(15% 0.008 85)", "oklch(28% 0.008 85)", "oklch(42% 0.008 85)", "oklch(55% 0.008 85)", "oklch(68% 0.008 85)", "oklch(80% 0.008 85)", "oklch(90% 0.008 85)", "oklch(95.5% 0.008 85)"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Smooth Ink",
+        "canonical": "#0d0d0d",
+        "tonalRamp": ["oklch(15% 0 0)", "oklch(26% 0 0)", "oklch(38% 0 0)", "oklch(50% 0 0)", "oklch(62% 0 0)", "oklch(74% 0 0)", "oklch(86% 0 0)", "oklch(95% 0 0)"]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Soft Ink",
+        "canonical": "#3b3a37",
+        "tonalRamp": ["oklch(15% 0.004 80)", "oklch(25% 0.004 80)", "oklch(34% 0.004 80)", "oklch(48% 0.004 80)", "oklch(60% 0.004 80)", "oklch(72% 0.004 80)", "oklch(85% 0.004 80)", "oklch(95% 0.004 80)"]
+      },
+      "ink-mute": {
+        "role": "neutral",
+        "displayName": "Mute Ink",
+        "canonical": "#6a6864",
+        "tonalRamp": ["oklch(15% 0.005 80)", "oklch(26% 0.005 80)", "oklch(38% 0.005 80)", "oklch(50% 0.005 80)", "oklch(62% 0.005 80)", "oklch(74% 0.005 80)", "oklch(86% 0.005 80)", "oklch(95% 0.005 80)"]
+      },
+      "hair": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "rgba(13, 13, 13, 0.16)",
+        "tonalRamp": ["rgba(13,13,13,0.9)", "rgba(13,13,13,0.7)", "rgba(13,13,13,0.5)", "rgba(13,13,13,0.36)", "rgba(13,13,13,0.24)", "rgba(13,13,13,0.16)", "rgba(13,13,13,0.08)", "rgba(13,13,13,0.04)"]
+      }
+    },
+    "typographyMeta": {
+      "masthead": { "displayName": "Masthead", "purpose": "The name in the rail, uppercase on two lines; the only bold Bodoni." },
+      "display": { "displayName": "Display", "purpose": "The cover headline only." },
+      "headline": { "displayName": "Headline", "purpose": "Department titles beside the heavy rule, the Contact headline, the lead project name." },
+      "title": { "displayName": "Title", "purpose": "Feature teasers, project and service names, sub-department heads." },
+      "lede": { "displayName": "Lede", "purpose": "Cover and department standfirsts in ink-soft, 68ch measure." },
+      "body": { "displayName": "Body", "purpose": "Running copy; two columns with a hairline column rule from md." },
+      "label": { "displayName": "Label", "purpose": "Nav, folio, buttons, captions, roles, form labels, filter tabs, social links." },
+      "label-sm": { "displayName": "Label small", "purpose": "Stack lists, table heads, dateline, colophon, counts." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "The one easing: page turn, button mark slide, arrow travel, Motion default." },
+      { "name": "page-turn", "value": "clip-path inset(0 100% 0 0) -> inset(0); animation-timeline: view(); range entry 0% to 45% (+ --turn-shift)", "purpose": "Scroll-driven section reveal from the gutter; declared only inside @supports (animation-timeline: view()) and prefers-reduced-motion: no-preference." },
+      { "name": "mark-in", "value": "opacity 0 -> 1, translateY(4px) -> 0; animation-timeline: view(); range entry 35% to 85%", "purpose": "The hidden [data-mark] lands last inside a page turn." },
+      { "name": "duration-state", "value": "300ms", "purpose": "Button colour and mark slide, arrow travel, logo colour-in." },
+      { "name": "duration-colour", "value": "200ms", "purpose": "Link, nav and filter colour changes." },
+      { "name": "menu-fade", "value": "250ms opacity (Motion, reducedMotion: user)", "purpose": "The only Motion use: the mobile Contents sheet." },
+      { "name": "smooth-scroll", "value": "Lenis lerp 0.1, wheelMultiplier 0.95, anchor scrollTo 1.2s offset -8", "purpose": "Fine-pointer devices without reduced motion only." },
+      { "name": "reduced-motion", "value": "animation-duration 0.01ms; transition-duration 0.01ms; scroll-behavior auto", "purpose": "Global collapse of all motion under prefers-reduced-motion: reduce." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ],
+    "browserSurfaces": [
+      { "name": "selection", "value": "background var(--spot); color var(--on-spot)" },
+      { "name": "scrollbar", "value": "thin; thumb var(--ink) with 2px var(--paper-deep) border; track var(--paper-deep); 10px" },
+      { "name": "caret", "value": "caret-color var(--spot); accent-color var(--spot)" },
+      { "name": "focus-ring", "value": "outline 2px solid var(--spot); outline-offset 3px" },
+      { "name": "underline", "value": "text-underline-offset 0.18em; text-decoration-thickness 1px" },
+      { "name": "theme-color", "value": "#fbfaf6; color-scheme light" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Spot Button",
+      "kind": "button",
+      "refersTo": "button-spot",
+      "description": "Primary action: teal fill, tracked capitals, the flame-A mark slides in from the left edge on hover.",
+      "html": "<a class=\"ds-btn ds-btn-spot\" href=\"#\"><span class=\"ds-btn-mark\" aria-hidden=\"true\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\"><path d=\"M8 1 C9 4 11 5 11 8 C11 10 9.5 11.5 8 12 C6.5 11.5 5 10 5 8 C5 6.5 5.6 5.4 6.2 4.6 C6.3 6 7 6.8 8 7.2 C8.6 5.6 8.3 3.4 8 1 Z M3 15 L6.5 8.5 L8 11 L9.5 8.5 L13 15 Z\" fill=\"currentColor\"/></svg></span><span class=\"ds-btn-label\">Read the projects</span></a>",
+      "css": ".ds-btn { position: relative; isolation: isolate; display: inline-flex; align-items: center; justify-content: center; gap: .5rem; overflow: hidden; height: 3rem; padding: 0 1.5rem; font-family: var(--font-label, 'Archivo', 'Helvetica Neue', Arial, sans-serif); font-size: .75rem; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; line-height: 1.4; white-space: nowrap; border: 0; border-radius: 0; text-decoration: none; cursor: pointer; transition: background-color .3s cubic-bezier(.22,1,.36,1), color .3s cubic-bezier(.22,1,.36,1); } .ds-btn-spot { background: var(--spot, #0a7466); color: var(--on-spot, #fff); } .ds-btn-spot:hover { background: var(--spot-deep, #06564c); } .ds-btn:focus-visible { outline: 2px solid var(--spot, #0a7466); outline-offset: 3px; } .ds-btn-mark { position: absolute; left: .75rem; top: 50%; transform: translate(-220%, -50%); opacity: 0; transition: transform .3s cubic-bezier(.22,1,.36,1), opacity .3s cubic-bezier(.22,1,.36,1); line-height: 0; } .ds-btn:hover .ds-btn-mark, .ds-btn:focus-visible .ds-btn-mark { transform: translate(0, -50%); opacity: 1; } .ds-btn-label { display: inline-flex; transition: transform .3s cubic-bezier(.22,1,.36,1); } .ds-btn:hover .ds-btn-label, .ds-btn:focus-visible .ds-btn-label { transform: translateX(.625rem); } .ds-btn:disabled { opacity: .5; pointer-events: none; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action beside a spot button: 1px ink border, inverts to ink on hover.",
+      "html": "<a class=\"ds-btn ds-btn-outline\" href=\"#\"><span class=\"ds-btn-mark\" aria-hidden=\"true\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\"><path d=\"M8 1 C9 4 11 5 11 8 C11 10 9.5 11.5 8 12 C6.5 11.5 5 10 5 8 C5 6.5 5.6 5.4 6.2 4.6 C6.3 6 7 6.8 8 7.2 C8.6 5.6 8.3 3.4 8 1 Z M3 15 L6.5 8.5 L8 11 L9.5 8.5 L13 15 Z\" fill=\"currentColor\"/></svg></span><span class=\"ds-btn-label\">Email Arham</span></a>",
+      "css": ".ds-btn { position: relative; isolation: isolate; display: inline-flex; align-items: center; justify-content: center; gap: .5rem; overflow: hidden; height: 3rem; padding: 0 1.5rem; font-family: var(--font-label, 'Archivo', 'Helvetica Neue', Arial, sans-serif); font-size: .75rem; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; line-height: 1.4; white-space: nowrap; border-radius: 0; text-decoration: none; cursor: pointer; transition: background-color .3s cubic-bezier(.22,1,.36,1), color .3s cubic-bezier(.22,1,.36,1), border-color .3s cubic-bezier(.22,1,.36,1); } .ds-btn-outline { background: transparent; color: var(--ink, #0d0d0d); border: 1px solid var(--ink, #0d0d0d); } .ds-btn-outline:hover { background: var(--ink, #0d0d0d); color: var(--paper, #fbfaf6); } .ds-btn:focus-visible { outline: 2px solid var(--spot, #0a7466); outline-offset: 3px; } .ds-btn-mark { position: absolute; left: .75rem; top: 50%; transform: translate(-220%, -50%); opacity: 0; transition: transform .3s cubic-bezier(.22,1,.36,1), opacity .3s cubic-bezier(.22,1,.36,1); line-height: 0; } .ds-btn:hover .ds-btn-mark, .ds-btn:focus-visible .ds-btn-mark { transform: translate(0, -50%); opacity: 1; } .ds-btn-label { display: inline-flex; transition: transform .3s cubic-bezier(.22,1,.36,1); } .ds-btn:hover .ds-btn-label, .ds-btn:focus-visible .ds-btn-label { transform: translateX(.625rem); }"
+    },
+    {
+      "name": "Ink Button",
+      "kind": "button",
+      "refersTo": "button-ink",
+      "description": "Ink fill, paper text; hover turns spot. Used as the submit on the teal spread (where hover inverts to paper/ink instead).",
+      "html": "<button class=\"ds-btn ds-btn-ink\" type=\"button\"><span class=\"ds-btn-mark\" aria-hidden=\"true\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\"><path d=\"M8 1 C9 4 11 5 11 8 C11 10 9.5 11.5 8 12 C6.5 11.5 5 10 5 8 C5 6.5 5.6 5.4 6.2 4.6 C6.3 6 7 6.8 8 7.2 C8.6 5.6 8.3 3.4 8 1 Z M3 15 L6.5 8.5 L8 11 L9.5 8.5 L13 15 Z\" fill=\"currentColor\"/></svg></span><span class=\"ds-btn-label\">Send message</span></button>",
+      "css": ".ds-btn { position: relative; isolation: isolate; display: inline-flex; align-items: center; justify-content: center; gap: .5rem; overflow: hidden; height: 3.5rem; padding: 0 2rem; font-family: var(--font-label, 'Archivo', 'Helvetica Neue', Arial, sans-serif); font-size: .8125rem; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; line-height: 1.4; white-space: nowrap; border: 0; border-radius: 0; cursor: pointer; transition: background-color .3s cubic-bezier(.22,1,.36,1), color .3s cubic-bezier(.22,1,.36,1); } .ds-btn-ink { background: var(--ink, #0d0d0d); color: var(--paper, #fbfaf6); } .ds-btn-ink:hover { background: var(--spot, #0a7466); } .ds-btn:focus-visible { outline: 2px solid var(--spot, #0a7466); outline-offset: 3px; } .ds-btn-mark { position: absolute; left: .75rem; top: 50%; transform: translate(-220%, -50%); opacity: 0; transition: transform .3s cubic-bezier(.22,1,.36,1), opacity .3s cubic-bezier(.22,1,.36,1); line-height: 0; } .ds-btn:hover .ds-btn-mark, .ds-btn:focus-visible .ds-btn-mark { transform: translate(0, -50%); opacity: 1; } .ds-btn-label { display: inline-flex; transition: transform .3s cubic-bezier(.22,1,.36,1); } .ds-btn:hover .ds-btn-label, .ds-btn:focus-visible .ds-btn-label { transform: translateX(.625rem); }"
+    },
+    {
+      "name": "Text Link",
+      "kind": "custom",
+      "refersTo": "text-link",
+      "description": "The read-on device: a tracked label with a 1px ink rule and an arrow; rule and text turn spot, the arrow travels.",
+      "html": "<a class=\"ds-textlink\" href=\"#\"><span class=\"ds-textlink-text\">Visit site</span><svg class=\"ds-textlink-arrow\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"/><path d=\"M7 17 17 7\"/></svg></a>",
+      "css": ".ds-textlink { display: inline-flex; align-items: center; gap: .5rem; font-family: var(--font-label, 'Archivo', 'Helvetica Neue', Arial, sans-serif); font-size: .75rem; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; line-height: 1.4; color: var(--ink, #0d0d0d); text-decoration: none; transition: color .2s; } .ds-textlink-text { border-bottom: 1px solid var(--ink, #0d0d0d); padding-bottom: .125rem; transition: border-color .2s; } .ds-textlink:hover, .ds-textlink:focus-visible { color: var(--spot, #0a7466); } .ds-textlink:hover .ds-textlink-text { border-color: var(--spot, #0a7466); } .ds-textlink-arrow { transition: transform .3s cubic-bezier(.22,1,.36,1); } .ds-textlink:hover .ds-textlink-arrow { transform: translateX(.25rem); } .ds-textlink:focus-visible { outline: 2px solid var(--spot, #0a7466); outline-offset: 3px; }"
+    },
+    {
+      "name": "Plate",
+      "kind": "card",
+      "refersTo": "plate",
+      "description": "Commissioned-art panel: ink ground, one hard-edged spot shape (disc shown), the screenshot mounted in the 15/6/9/24% inset, printed flat, caption below.",
+      "html": "<figure class=\"ds-plate\"><svg class=\"ds-plate-shape\" viewBox=\"0 0 100 100\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><circle cx=\"30\" cy=\"34\" r=\"44\"/></svg><div class=\"ds-plate-well\"><div class=\"ds-plate-img\" role=\"img\" aria-label=\"Screenshot\"></div></div></figure><p class=\"ds-plate-caption\">Cover story: EasyGPT <span class=\"ds-plate-cat\">Web app</span></p>",
+      "css": ".ds-plate { position: relative; isolation: isolate; overflow: hidden; margin: 0; background: var(--ink, #0d0d0d); aspect-ratio: 4 / 3; width: 100%; max-width: 32rem; border-radius: 0; } .ds-plate-shape { position: absolute; inset: 0; width: 100%; height: 100%; fill: var(--spot, #0a7466); } .ds-plate-well { position: absolute; inset: 15% 6% 9% 24%; overflow: hidden; } .ds-plate-img { width: 100%; height: 100%; background: var(--paper, #fbfaf6); } .ds-plate-caption { margin: 1rem 0 0; font-family: var(--font-display, 'Bodoni Moda', 'Didot', Georgia, serif); font-size: 1.375rem; line-height: 1.25; color: var(--ink, #0d0d0d); } .ds-plate-cat { margin-left: .75rem; font-family: var(--font-label, 'Archivo', 'Helvetica Neue', Arial, sans-serif); font-size: .75rem; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-mute, #6a6864); }"
+    },
+    {
+      "name": "Department Opener",
+      "kind": "custom",
+      "refersTo": "headline",
+      "description": "A 3px ink rule, the department title in headline Bodoni, an optional standfirst beside it. No kicker.",
+      "html": "<div class=\"ds-dept\"><h2 class=\"ds-dept-title\">About</h2><p class=\"ds-dept-standfirst\">Great design is not about making it look good, but about making it work well.</p></div>",
+      "css": ".ds-dept { border-top: 3px solid var(--ink, #0d0d0d); padding-top: 1.25rem; display: grid; grid-template-columns: 5fr 5fr 2fr; gap: 2.5rem; } .ds-dept-title { margin: 0; font-family: var(--font-display, 'Bodoni Moda', 'Didot', Georgia, serif); font-weight: 400; font-size: clamp(2.25rem, 1.5rem + 2.6vw, 3.75rem); line-height: 1; letter-spacing: -.01em; color: var(--ink, #0d0d0d); text-wrap: balance; } .ds-dept-standfirst { margin: 0; padding-top: .5rem; font-family: var(--font-body, 'Source Serif 4', Georgia, serif); font-size: clamp(1.2rem, 1.05rem + .5vw, 1.4rem); line-height: 1.45; color: var(--ink-soft, #3b3a37); max-width: 68ch; }"
+    },
+    {
+      "name": "Ruled Facts List",
+      "kind": "custom",
+      "refersTo": "body",
+      "description": "The ruled row pattern: 1px ink rule opens, hairline closes each row, label column in mute Archivo, value in serif.",
+      "html": "<dl class=\"ds-facts\"><div class=\"ds-facts-row\"><dt>Residence</dt><dd>Pakistan</dd></div><div class=\"ds-facts-row\"><dt>Experience</dt><dd class=\"ds-tabular\">7+ years</dd></div><div class=\"ds-facts-row\"><dt>Freelance</dt><dd class=\"ds-spot\">Available</dd></div></dl>",
+      "css": ".ds-facts { margin: 0; border-top: 1px solid var(--ink, #0d0d0d); font-family: var(--font-body, 'Source Serif 4', Georgia, serif); } .ds-facts-row { display: grid; grid-template-columns: 7rem 1fr; gap: 1rem; padding: .625rem 0; border-bottom: 1px solid var(--hair, rgba(13,13,13,.16)); font-size: .9375rem; line-height: 1.6; } .ds-facts dt { padding-top: .125rem; font-family: var(--font-label, 'Archivo', 'Helvetica Neue', Arial, sans-serif); font-size: .75rem; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; line-height: 1.4; color: var(--ink-mute, #6a6864); } .ds-facts dd { margin: 0; color: var(--ink, #0d0d0d); } .ds-tabular { font-variant-numeric: tabular-nums lining-nums; } .ds-spot { color: var(--spot, #0a7466); }"
+    },
+    {
+      "name": "Input on Spot",
+      "kind": "input",
+      "refersTo": "input-on-spot",
+      "description": "Contact field on the teal spread: no box, a bottom rule at 60% white that goes solid on focus, serif text, tracked label above.",
+      "html": "<div class=\"ds-field-wrap\"><label class=\"ds-field-label\" for=\"ds-email\">Email address</label><input class=\"ds-field\" id=\"ds-email\" type=\"email\" placeholder=\"you@company.com\"></div>",
+      "css": ".ds-field-wrap { background: var(--spot, #0a7466); padding: 1.5rem; } .ds-field-label { display: block; margin-bottom: .25rem; font-family: var(--font-label, 'Archivo', 'Helvetica Neue', Arial, sans-serif); font-size: .75rem; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; line-height: 1.4; color: var(--on-spot, #fff); } .ds-field { width: 100%; box-sizing: border-box; background: transparent; border: 0; border-bottom: 1px solid rgba(255,255,255,.6); border-radius: 0; padding: .75rem 0; font-family: var(--font-body, 'Source Serif 4', Georgia, serif); font-size: 1.0625rem; line-height: 1.6; color: var(--on-spot, #fff); caret-color: var(--on-spot, #fff); transition: border-color .2s; } .ds-field::placeholder { color: var(--on-spot-soft, #e6f3ef); } .ds-field:focus { border-color: var(--on-spot, #fff); outline: none; }"
+    },
+    {
+      "name": "Rail Navigation",
+      "kind": "nav",
+      "refersTo": "nav-item",
+      "description": "The masthead rail's department list: tracked labels under a 1px ink rule, a 6px teal bullet scales in beside the active item.",
+      "html": "<nav class=\"ds-rail\" aria-label=\"Departments\"><p class=\"ds-rail-name\">Arham<br>Awan</p><p class=\"ds-rail-tag\">Web. Mobile. AI.</p><ul class=\"ds-rail-list\"><li><a class=\"ds-rail-item ds-rail-item--active\" href=\"#\" aria-current=\"location\"><span class=\"ds-rail-dot\"></span>Cover</a></li><li><a class=\"ds-rail-item\" href=\"#\"><span class=\"ds-rail-dot\"></span>About</a></li><li><a class=\"ds-rail-item\" href=\"#\"><span class=\"ds-rail-dot\"></span>Projects</a></li><li><a class=\"ds-rail-item\" href=\"#\"><span class=\"ds-rail-dot\"></span>Contact</a></li></ul></nav>",
+      "css": ".ds-rail { width: 18.75rem; box-sizing: border-box; padding: 2.25rem 2rem; background: var(--paper, #fbfaf6); border-right: 1px solid var(--ink, #0d0d0d); } .ds-rail-name { margin: 0; font-family: var(--font-display, 'Bodoni Moda', 'Didot', Georgia, serif); font-size: 2.5rem; font-weight: 600; line-height: .95; letter-spacing: .01em; text-transform: uppercase; color: var(--ink, #0d0d0d); } .ds-rail-tag { margin: .75rem 0 0; font-family: var(--font-label, 'Archivo', 'Helvetica Neue', Arial, sans-serif); font-size: .75rem; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; line-height: 1.4; color: var(--spot, #0a7466); } .ds-rail-list { list-style: none; margin: 2.5rem 0 0; padding: 1.5rem 0 0; border-top: 1px solid var(--ink, #0d0d0d); display: flex; flex-direction: column; gap: .625rem; } .ds-rail-item { display: inline-flex; align-items: center; gap: .75rem; padding: .125rem 0; font-family: var(--font-label, 'Archivo', 'Helvetica Neue', Arial, sans-serif); font-size: .75rem; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; line-height: 1.4; color: var(--ink, #0d0d0d); text-decoration: none; transition: color .2s; } .ds-rail-item:hover, .ds-rail-item--active { color: var(--spot, #0a7466); } .ds-rail-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--spot, #0a7466); transform: scale(0); opacity: 0; transition: transform .3s, opacity .3s; } .ds-rail-item--active .ds-rail-dot { transform: scale(1); opacity: 1; } .ds-rail-item:focus-visible { outline: 2px solid var(--spot, #0a7466); outline-offset: 3px; }"
+    },
+    {
+      "name": "Filter Tabs",
+      "kind": "chip",
+      "refersTo": "filter-tab",
+      "description": "Project filters: tracked labels on a 1px ink baseline; the selected one is spot with a 2px spot underline.",
+      "html": "<div class=\"ds-tabs\" role=\"group\" aria-label=\"Filter projects\"><button class=\"ds-tab ds-tab--on\" type=\"button\" aria-pressed=\"true\">All</button><button class=\"ds-tab\" type=\"button\" aria-pressed=\"false\">Web Apps</button><button class=\"ds-tab\" type=\"button\" aria-pressed=\"false\">Mobile Apps</button></div>",
+      "css": ".ds-tabs { display: flex; gap: 1.5rem; border-bottom: 1px solid var(--ink, #0d0d0d); } .ds-tab { margin-bottom: -1px; padding: 0 0 .75rem; background: none; border: 0; border-bottom: 2px solid transparent; border-radius: 0; font-family: var(--font-label, 'Archivo', 'Helvetica Neue', Arial, sans-serif); font-size: .75rem; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; line-height: 1.4; color: var(--ink-mute, #6a6864); cursor: pointer; transition: color .2s, border-color .2s; } .ds-tab:hover { color: var(--ink, #0d0d0d); } .ds-tab--on { color: var(--spot, #0a7466); border-bottom-color: var(--spot, #0a7466); } .ds-tab:focus-visible { outline: 2px solid var(--spot, #0a7466); outline-offset: 3px; }"
+    },
+    {
+      "name": "Drop Initial Paragraph",
+      "kind": "custom",
+      "refersTo": "body",
+      "description": "The first paragraph of a feature: a Bodoni initial in spot at 4.6em, floated, over two-column serif copy.",
+      "html": "<p class=\"ds-dropcap\">Arham is a Full Stack Developer based in Karachi who builds web, mobile and AI products end to end, from the first wireframe to the store listing, for clients across three continents.</p>",
+      "css": ".ds-dropcap { max-width: 68ch; margin: 0; font-family: var(--font-body, 'Source Serif 4', Georgia, serif); font-size: 1.0625rem; line-height: 1.6; color: var(--ink-soft, #3b3a37); text-wrap: pretty; } .ds-dropcap::first-letter { font-family: var(--font-display, 'Bodoni Moda', 'Didot', Georgia, serif); font-weight: 400; color: var(--spot, #0a7466); float: left; font-size: 4.6em; line-height: .78; padding-right: .08em; padding-top: .06em; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Shipped Issue",
+    "overview": "The site is a single issue of a mid-century magazine about one developer. A masthead rail runs down the left, departments arrive in a fixed order under heavy rules, features run in two columns with drop initials, and the issue closes with a letters-and-colophon spread. Structure comes from rules, columns and type; nothing is boxed, lifted or glossed. The one colour is a teal ink taken from the flame-A mark, printed as a spot: buttons, the active department, drop initials, the shape behind every plate, and the full-bleed closing spread.\n\nImagery is commissioned-art only. Every screenshot is mounted as a plate: a black panel, one hard-edged teal shape, the product sitting over the shape's right-hand field. The flame-A mark is a found landmark, hidden small once per view and revealed last by the page turn. Density is editorial: long measures, hairline-ruled rows, tabular numerals in Archivo, generous department space. The rejected category defaults, confirmed by the build: no centred-name hero, no bento cards, no badge rows, no WebGL.",
+    "keyCharacteristics": [
+      "Coated paper ground, smooth near-black ink, one teal spot; no gradients, no second accent.",
+      "Three faces with real jobs: Bodoni Moda (masthead, headlines, initials), Source Serif 4 (reading), Archivo tracked caps (labels, nav, buttons, tables, numerals).",
+      "Rules carry hierarchy: 3px heavy above a department, 1px ink above a list, hairline between rows.",
+      "Zero radius everywhere except the 6px nav bullet; zero box-shadow anywhere.",
+      "One authored motion, the scroll-driven page turn, with the mark landing last."
+    ],
+    "rules": [
+      { "name": "The One Spot Rule", "body": "The only chromatic ink is `spot`. It appears on paper as small marks (buttons, active nav, initials, roles) and once at full bleed on the Contact spread. No second hue, no tints as accents, no gradients.", "section": "colors" },
+      { "name": "The Ink Hierarchy Rule", "body": "Text tone drops by exactly one step per level: `ink` for the thing being read, `ink-soft` for the running copy around it, `ink-mute` for the metadata beneath it. Never skip from `ink` to `ink-mute` inside one block.", "section": "colors" },
+      { "name": "The Drop Initial Rule", "body": "The first paragraph of a feature and the first two reviews open with a drop initial: Bodoni 400, `spot`, 4.6em, floated, line-height 0.78. One per block, never on a lede.", "section": "typography" },
+      { "name": "The Tabular Rule", "body": "Every number that sits in a column, dateline or count sets `tabular-nums lining-nums` in Archivo.", "section": "typography" },
+      { "name": "The No Kicker Rule", "body": "Departments open with a rule and a title. Labels sit beneath or beside the title (category, role, dateline), never above it as an eyebrow.", "section": "typography" },
+      { "name": "The Printed Flat Rule", "body": "Nothing casts a shadow and nothing glows. If an element needs to separate from the page, give it a rule, a solid ground, or a border in `ink`, never a shadow.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do open every department with the 3px ink rule and the title in headline Bodoni; put counts and links in the aside column, labels beneath titles.",
+      "Do mount every screenshot or portrait as a plate: `ink` panel, one `spot` shape, image inside the 15/6/9/24% inset, caption below.",
+      "Do hide the flame-A mark exactly once per section at 14px to 22px with `data-mark`, so the page turn lands it last.",
+      "Do separate rows with hairlines and open lists with a 1px ink rule; let padding stay at the 0.625rem to 1.5rem row scale.",
+      "Do set every button, link and metadata line in Archivo 0.75rem, 0.16em tracking, uppercase, 500 weight; numbers tabular.",
+      "Do keep ground paper and text ink; drop to `ink-soft` for running copy and `ink-mute` for metadata.",
+      "Do keep the page turn as the only authored motion and gate it on scroll-timeline support and no reduced-motion preference."
+    ],
+    "donts": [
+      "Don't add a radius to any surface; the nav bullet is the only round form.",
+      "Don't add box-shadow, blur, gloss or rim light; plates print flat.",
+      "Don't introduce a second hue, a gradient, or `spot-tint` as an accent; the spot stays rare on paper and total on the Contact spread.",
+      "Don't place a kicker or eyebrow label above a headline; the rule and the title are the opener.",
+      "Don't box content in cards, bento tiles or badge rows; use rules and columns.",
+      "Don't set Bodoni bold anywhere but the masthead name, and never below 1.25rem.",
+      "Don't bring back WebGL, canvases or cursor effects; the world is print."
+    ]
+  }
+}

@@ -1,10 +1,11 @@
+import { ArrowUpRight } from "lucide-react";
 import { socialLinks, type SocialLink } from "@/data/socialLinks";
 import { cn } from "@/lib/utils";
-import { ArrowUpRight } from "lucide-react";
 
-export function SocialLinks({ items = socialLinks, className, compact = false }: { items?: SocialLink[]; className?: string; compact?: boolean }) {
+export function SocialLinks({ items = socialLinks, className, tone = "ink" }: { items?: SocialLink[]; className?: string; tone?: "ink" | "spot" }) {
+  const onSpot = tone === "spot";
   return (
-    <ul className={cn("flex flex-wrap gap-x-5 gap-y-2", className)}>
+    <ul className={cn("flex flex-wrap gap-x-6 gap-y-2", className)} role="list">
       {items.map((social) => (
         <li key={social.label}>
           <a
@@ -12,12 +13,12 @@ export function SocialLinks({ items = socialLinks, className, compact = false }:
             target="_blank"
             rel="noopener noreferrer"
             className={cn(
-              "group inline-flex items-center gap-1 text-muted hover:text-accent transition-colors duration-200",
-              compact ? "text-sm" : "text-sm md:text-base",
+              "group/soc label inline-flex items-center gap-1 transition-colors duration-200",
+              onSpot ? "text-on-spot hover:text-on-spot-soft" : "text-ink hover:text-spot",
             )}
           >
-            {social.label}
-            <ArrowUpRight className="size-3.5 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
+            <span className={cn("border-b pb-0.5 transition-colors", onSpot ? "border-on-spot/50 group-hover/soc:border-on-spot" : "border-hair group-hover/soc:border-spot")}>{social.label}</span>
+            <ArrowUpRight className="size-3 transition-transform duration-300 ease-[var(--ease-out)] group-hover/soc:-translate-y-0.5 group-hover/soc:translate-x-0.5" aria-hidden="true" strokeWidth={1.75} />
           </a>
         </li>
       ))}
